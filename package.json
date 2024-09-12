@@ -1,0 +1,22 @@
+{
+  "name": "atividadeprojetodesoftware",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc build back/index.ts",
+    "start": "ts-node --transpile-only back/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^4.17.21",
+    "ejs": "^3.1.10",
+    "express": "^4.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}

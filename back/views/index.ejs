@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Consumindo API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            background-image: var();
+        }
+
+        button {
+            margin: 10px;
+            background-color: black;
+            border: 1px solid black;
+            width: 100px;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        a {
+            
+            color: white;
+            text-decoration: none;
+            outline: none;
+        }
+
+        p {
+
+            margin: 10px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body onload="onCarregar()">    
+    <div class="container2">
+        <h1>Pokedex API</h1>
+        <% results.forEach(element => { %>
+            <div>
+                <p>Nome: <%= element.name %></p>
+        
+                <button><a href="http://localhost:3000/detalhar/<%= element.name %>">Mais detalhes</a></button>
+            </div>
+        <%}) %>
+    </div>  
+</body>
+</html>

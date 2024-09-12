@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <h1>Pokedex - detalhamento dos Pokemons</h1>
+            <button><a href="http://localhost:3000/">Voltar</a></button>
+            <img src="<%= sprites.front_default%>" alt="">
+            <p>Id: <%= id %></p>
+            <p>Nome: <%= name %></p>
+            <p>Experiencia: <%= base_experience %></p>
+            <p>Altura: <%= height %></p>
+            <p>Peso: <%= weight %></p>
+            <p>Tipos: </p>
+            <div>
+                <% types.forEach((el) => { %>
+                    <p>
+                        <pre>   => <%= el.type.name %></pre>
+                    </p>
+                <% }) %>
+            </div>
+            <p>Status: </p>
+            <div>
+                <% stats.forEach((el) => { %>
+                    <p>
+                        <pre>   => <%= el.stat.name %>: <%= el.base_stat %></pre>
+                    </p>
+                <% }) %>
+            </div>
+            <p>Abilidades: </p>
+            <div>
+                <% abilities.forEach((el) => { %>
+                    <p>
+                        <pre>   => <%= el.ability.name %></pre>
+                    </p>
+                <% }) %>
+            </div>
+            <p>Ataques: </p>
+            <div>
+                <% moves.forEach((el) => { %>
+                    <p>
+                        <pre>   => <%= el.move.name%></pre>
+                    </p>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
